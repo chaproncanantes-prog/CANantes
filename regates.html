@@ -763,7 +763,7 @@ const extractPdfPlainText = async (arrayBuffer) => {
 const isAlreadyProcessed = (text) => {
   const firstLine = text.split(/\r?\n/)[0] || "";
   const lower = firstLine.toLowerCase();
-  return lower.includes("ffa") || lower.includes("niveau dtn") || (lower.includes("équipage") && lower.includes("top"));
+  return lower.includes("ffa") || lower.includes("niveau dtn") || (lower.includes("équipage") && lower.includes("top")) || lower.includes("points");
 };
 
 const looksLikeRawCrewTimerText = (text) => /S[ée]rie:?\s*\d+|Pos\.\s+Equipage/i.test(text);
